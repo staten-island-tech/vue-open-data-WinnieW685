@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>SHSAT by Schools (2022)</h1>
+
     <h2>Search Schools by name</h2>
     <div class="container">
       <SchoolCards v-for="school in schools" :key="school.feeder_school_dbn" :school="school">
@@ -23,7 +24,10 @@ async function getSchool() {
   schools.value = data
 }
 getSchool()
-const route = useRoute()
+// const route = useRoute()
+onMounted(() => {
+  getSchool()
+})
 </script>
 
 <style scoped>
