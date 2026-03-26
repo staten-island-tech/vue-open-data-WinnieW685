@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/views/HomePage.vue'
-import SearchSchool from '@/views/SearchSchool.vue'
+import AcceptedStudents from '@/views/AcceptedStudents.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,9 +10,9 @@ const router = createRouter({
       component: HomePage,
     },
     {
-      path: '/search',
-      name: 'searchingschools',
-      component: SearchSchool,
+      path: '/accepted',
+      name: 'studentsaccepted',
+      component: AcceptedStudents,
     },
   ],
 })

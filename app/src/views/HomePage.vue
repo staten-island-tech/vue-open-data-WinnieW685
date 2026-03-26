@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <div><RouterLink to="/search"></RouterLink></div> -->
+    <div><RouterLink to="/accepted"> Accepted</RouterLink></div>
     <h1>SHSAT by Schools (2022)</h1>
 
     <h2>Search Schools by name</h2>
@@ -14,11 +14,11 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue' //watch used to run function
 import SchoolCards from '@/components/SchoolCards.vue'
-import { useRoute } from 'vue-router'
+
 const schools = ref(null)
 async function getSchool() {
   const response = await fetch(
-    `https://data.cityofnewyork.us/resource/k8ah-28f4.json?$limit=683&$offset=800`,
+    `https://data.cityofnewyork.us/resource/k8ah-28f4.json?$limit=554&$offset=800`,
   )
   const data = await response.json()
   console.log(data)

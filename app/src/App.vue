@@ -1,6 +1,8 @@
 <template>
   <div>
-    <RouterLink to="/overall"></RouterLink>
+    <h1>hi</h1>
+    <RouterLink to="/"></RouterLink>
+    <RouterView />
   </div>
 </template>
 
