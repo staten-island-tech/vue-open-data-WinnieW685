@@ -1,9 +1,10 @@
 <template>
   <div><RouterLink to="/"> HomePage</RouterLink></div>
-  <div>Accepted Students</div>
+  <AcceptedChart></AcceptedChart>
 </template>
 
 <script setup>
+import AcceptedChart from '@/components/AcceptedChart.vue'
 import { reactive } from 'vue'
 import { Bar } from 'vue-chartjs'
 </script>
